@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<PackageId>WebAPIWithScalarAndSerilog.Templates</PackageId>
+    <PackageVersion>1.0</PackageVersion>    
+    <Title>ASP.NET Core Web API Project Template (With Scalar and Serilog)</Title>
+    <Authors>Zin Min (zinmin@hotmail.com)</Authors>
+    <Description>Official ASP.NET Core Web API Project Template with Scalar and Serilog</Description>
+	  <PackageTags>ASP.NET;Web API;C#;Template</PackageTags>
+	
+	  <PackageType>Template</PackageType>
+    <TargetFramework>net10.0</TargetFramework>
+	  <NoBuild>true</NoBuild>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+	  <NoWarn>$(NoWarn);NU5128</NoWarn>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
+
+	<PackageOutputPath>
+      $(MSBuildThisFileDirectory)
+    </PackageOutputPath>
+  </PropertyGroup>
+  
+
+  <ItemGroup>
+    <Content Include="CustomWebAPIProject\**\*" 
+	Exclude="CustomWebAPIProject\**\bin\**;
+	CustomWebAPIProject\**\obj\**;
+	CustomWebAPIProject\**\Logs\*;
+	CustomWebAPIProject\**\*.user"/>
+  </ItemGroup>
+  
+  <ItemGroup>
+  <None Include="README.md" Pack="true" PackagePath="\" />
+  <None Include="LICENSE.txt" Pack="true" PackagePath="\" />
+</ItemGroup>
+
+</Project>
