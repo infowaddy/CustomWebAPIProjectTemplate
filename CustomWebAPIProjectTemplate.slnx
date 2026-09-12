@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="CustomWebAPIProject/CustomWebAPIProject.csproj" />
+  <Project Path="VSIXInstallerProject/VSIXInstallerProject.csproj" Id="200b1f89-8024-4d9f-b3ac-c867651784c8">
+    <Deploy />
+  </Project>
 </Solution>

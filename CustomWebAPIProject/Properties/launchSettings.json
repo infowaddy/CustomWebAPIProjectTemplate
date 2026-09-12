@@ -4,11 +4,11 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      //#if (EnableScalar)
+      //#if (!EnableScalar)
+      "launchBrowser": false,
+      //#else
       "launchBrowser": true,
       "launchUrl": "scalar",
-      //#else
-      "launchBrowser": false,
       //#endif
       "applicationUrl": "http://localhost:5290",
       "environmentVariables": {
@@ -18,11 +18,11 @@
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      //#if (EnableScalar)
+      //#if (!EnableScalar)
+      "launchBrowser": false,
+      //#else
       "launchBrowser": true,
       "launchUrl": "scalar",
-      //#else
-      "launchBrowser": false,
       //#endif
       "applicationUrl": "https://localhost:7008;http://localhost:5290",
       "environmentVariables": {
